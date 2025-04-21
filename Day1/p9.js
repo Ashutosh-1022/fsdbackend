@@ -1,8 +1,10 @@
-const fs=require('fs')
+const fs = require('fs');
+
 fs.rmdir("mydir",(err)=>{
-  if (err){
-    console.error("error deleting directory:",err);
-    return;
-  }
-  console.log("directory deleted successfully");
+    if(err){
+        console.log("Error deleting directory: ",err);
+    } else {
+        console.log("Directory deleted successfully.");
+    }
+
 })

@@ -1,14 +1,14 @@
-const fs=require('fs');
+const fs = require('fs');
+
 const read=()=>{
-
-
-    fs.readFile('./data.txt','utf-8',(err,data)=>{
+    fs.readFile('./data.txt','utf8',(err,data)=>{
         if(err)
-            console.log(err);
+            console.error(err);
         else
-        console.log(data);
-})
+            console.log(data)
+    
+    })
 }
-console.log("i am before reading");
+console.log("I am before reading")
 read();
-console.log("i am after reading");
+console.log("I am after reading")

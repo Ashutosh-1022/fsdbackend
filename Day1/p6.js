@@ -1,12 +1,11 @@
-const fs=require('fs')
+const fs=require('fs');
 
 const append=()=>{
-    const data =" hello"
-    fs.appendFile('./data.txt',data,(err)=>{
-        if(err) 
-            console.log(err)
-        else
-        console.log("successfully updated data");
-    })
-}
+    const data='This is an appended line.\n';
+    fs.appendFile('data.txt',data, (err) => {
+        if (err) throw err;
+        console.log('Data appended!');
+    });
+};
+
 append();
